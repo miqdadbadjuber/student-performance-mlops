@@ -12,11 +12,11 @@ flavors:
     code: null
     pickled_model: model.pkl
     serialization_format: cloudpickle
-    sklearn_version: 1.9.0
+    sklearn_version: 1.9.1
 mlflow_version: 2.19.0
 model_size_bytes: 6906589
-model_uuid: 83329e533b224cd6a9a956a53293773a
-run_id: 1a46aee7949f4c4e97b9c0cdc9f96b70
+model_uuid: d871833443ae4e8fba91672f6f1c97cc
+run_id: 2d8119cbb373415cae06a5c62e1dca9a
 signature:
   inputs: '[{"type": "double", "name": "Age", "required": true}, {"type": "long",
     "name": "Gender", "required": true}, {"type": "long", "name": "Ethnicity", "required":
@@ -30,4 +30,4 @@ signature:
     "name": "GPA", "required": true}]'
   outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
   params: null
-utc_time_created: '2026-06-30 09:27:01.902812'
+utc_time_created: '2026-10-19 02:58:07.140909'
