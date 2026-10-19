@@ -20,7 +20,7 @@
 
 This project implements an automated machine learning operations (MLOps) pipeline designed to predict student academic performance categories (`GradeClass`) from behavioral, demographic, and academic indicators.
 
-The repository consolidates experimental research into a production-style workflow: raw data preprocessing, automated train/test dataset generation, MLflow experiment logging, and a continuous delivery pipeline that containerizes the trained model and pushes it to Docker Hub.
+The repository consolidates experimental research into a production-style workflow: raw data preprocessing, automated train/test dataset generation, MLflow experiment logging, and a continuous delivery pipeline that validates model training and builds a containerized prediction service.
 
 ---
 
@@ -50,8 +50,7 @@ Student_performance_data_.csv
   - Automated trigger on push to main branch
   - Executes MLflow training run in local environment
   - Commits updated experiment run artifacts
-  - Builds standalone model container via mlflow models build-docker
-  - Authenticates and publishes container image to Docker Hub
+  - Builds and packages standalone model container via mlflow models build-docker
 ```
 
 ---
@@ -72,7 +71,7 @@ Student_performance_data_.csv
 ### 3. Continuous Delivery (`.github/workflows/ci.yml`)
 - Automates model retraining and packaging upon code updates.
 - Uses MLflow CLI tooling to generate a self-contained Docker container image exposing the prediction interface.
-- Automatically pushes the built image to Docker Hub using repository secrets.
+- Validates end-to-end container build reproducibility on the CI runner.
 
 ### 4. Exploratory Data Analysis (`student_performance_experiment.ipynb`)
 - Documents initial data exploration, feature distributions, correlation heatmaps, and early modeling experiments that shaped the final automated pipeline.
