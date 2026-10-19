@@ -92,27 +92,6 @@ Student_performance_data_.csv
 
 ---
 
-## Project Structure
+## License
 
-```text
-student-performance-mlops/
-├── .github/
-│   └── workflows/
-│       └── ci.yml               # Automated training and Docker build pipeline
-├── assets/
-│   └── banner.png
-├── MLProject/
-│   ├── MLproject                # MLflow project definition
-│   ├── conda.yaml               # Conda environment specification
-│   ├── modelling.py             # Model training script with MLflow autolog
-│   └── mlruns/                  # Tracked experiment artifacts and metadata
-├── student_performance_preprocessing/
-│   ├── train.csv                # Processed training features and targets
-│   ├── test.csv                 # Processed evaluation features and targets
-│   └── scaler.pkl               # Fitted StandardScaler object
-├── Student_performance_data_.csv # Raw input dataset
-├── student_performance_experiment.ipynb # Exploratory data analysis
-├── automate_preprocessing.py    # Standalone preprocessing automation script
-├── requirements.txt
-└── README.md
-```
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
