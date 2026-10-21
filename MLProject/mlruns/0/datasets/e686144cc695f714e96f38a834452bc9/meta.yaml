@@ -12,5 +12,5 @@ schema: '{"mlflow_colspec": [{"type": "double", "name": "Age", "required": true}
   "long", "name": "Volunteering", "required": true}, {"type": "double", "name": "GPA",
   "required": true}]}'
 source: '{"tags": {"mlflow.user": "runner", "mlflow.source.name": "modelling.py",
-  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "d1c3a5b92f8761ca044c006f24fb96b5411fbe5e"}}'
+  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "026b65a861bf87d7e0a7490303301b14931010d2"}}'
 source_type: code
